@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.off {
+    background-color: #3C5587;
+}
+
+#lamp{
+    display: inline-block;
+    position: absolute;
+    width: 10em;
+    height: 20em;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+}
+
+#glass {
+
+}
