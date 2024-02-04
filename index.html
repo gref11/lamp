@@ -12,19 +12,22 @@
 <body>
     <div class="container off">
         <svg width="100%" height="100%" viewBox="-100 -100 400 400" role="img">
-            <path d="M30 100 c0 -20, -20 -28, -20 -50 s18 -40, 40 -40 s40 18, 40 40 s-20 30, -20 50" stroke="white"
-                stroke-width="3" fill="white" fill-opacity="0.13" />
-            <path d="M70 100 v30 s-5 10 -20 10 s-20 -10 -20 -10 v -30" stroke="white" stroke-width="3"
-                fill="rgba(175,175,190)" />
-            <path d="M30 100 s5 10 20 10 s20 -10 20 -10 s-5 -10 -20 -10 s-20 10 -20 10" stroke="white" stroke-width="3"
-                fill="rgba(175,175,190)" />
+            <path class="base circuit" d="M70 100 v30 s-5 10 -20 10 s-20 -10 -20 -10 v -30 s5 -10, 20 -10 s20 10 20 10"
+                stroke="white" stroke-width="3" fill="rgba(175,175,190)" />
+            <path d="M36 106 v30" stroke="white" stroke-width="6" />
+            <path class="circuit" d="M70 100 v30 s-5 10 -20 10 s-20 -10 -20 -10 v -30 s5 -10, 20 -10 s20 10 20 10"
+                stroke="white" stroke-width="3" fill="transparent" />
+            <path class="glass circuit"
+                d="M30 100 c0 -20, -20 -28, -20 -50 s18 -40, 40 -40 s40 18, 40 40 s-20 30, -20 50 l0 0 s-5 10 -20 10 s-20 -10 -20 -10"
+                stroke="white" stroke-width="3" fill="white" fill-opacity="0.13" />
             <path d="M20 50 c0 -20, 20 -30, 30 -30 a3,3 0 0 1 0 0" stroke="white" fill="transparent" stroke-width="6"
                 stroke-linecap="round" />
-            <path d="M36 106 v30" stroke="white" stroke-width="6" />
-            <path d="M45 100 l-5 -25" stroke="rgb(150, 150, 150)" stroke-width="4" stroke-linecap="round" />
-            <path d="M55 100 l5 -25" stroke="rgb(150, 150, 150)" stroke-width="4" stroke-linecap="round" />
-            <path id="thread" d="M50 140 L50 185" stroke="white" stroke-width="3"/>
-            <circle id="dot" cx="50" cy="185" r="4" fill="white"/>
+            <path class="contact" d="M45 100 l-5 -25" stroke="rgb(150, 150, 150)" stroke-width="4"
+                stroke-linecap="round" />
+            <path class="contact" d="M55 100 l5 -25" stroke="rgb(150, 150, 150)" stroke-width="4"
+                stroke-linecap="round" />
+            <path id="thread" class="circuit" d="M50 140 L50 185" stroke="white" stroke-width="3" fill="transparent"/>
+            <circle id="dot" class="circuit" cx="50" cy="185" r="4" fill="white" />
         </svg>
     </div>
 </body>

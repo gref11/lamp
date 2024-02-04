@@ -15,3 +15,32 @@ body {
 .off {
     background-color: #3C5587;
 }
+
+.on {
+    background-color: rgb(197, 177, 153);
+}
+
+#dot:hover {
+    cursor: grab;
+}
+
+#dot:active {
+    cursor: grabbing;
+}
+
+.on .circuit {
+    stroke: black;
+}
+
+.on .glass {
+    fill: rgb(255, 240, 124);
+    fill-opacity: 0.4;
+}
+
+.on #dot {
+    fill: black;
+}
+
+.on .contact {
+    stroke: rgb(237, 237, 237);
+}
