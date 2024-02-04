@@ -15,18 +15,3 @@ body {
 .off {
     background-color: #3C5587;
 }
-
-#lamp{
-    display: inline-block;
-    position: absolute;
-    width: 10em;
-    height: 20em;
-    left: 40%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    margin: auto;
-}
-
-#glass {
-
-}
