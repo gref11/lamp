@@ -13,7 +13,7 @@ body {
 }
 
 .off {
-    background-color: #3C5587;
+    background-color: #2f465d;
 }
 
 .on {
@@ -43,4 +43,29 @@ body {
 
 .on .contact {
     stroke: rgb(237, 237, 237);
+}
+
+#door {
+    fill: rgb(90, 70, 49);
+}
+
+.on #door {
+    fill: rgb(145, 137, 130);
+}
+
+.door-element {
+    stroke: rgb(55, 50, 43);
+
+}
+
+.on .door-element {
+    stroke: rgb(107, 99, 87);
+}
+
+#door-knob {
+    fill: rgb(194, 107, 0);
+}
+
+.on #door-knob {
+    fill: rgb(205, 143, 69);
 }

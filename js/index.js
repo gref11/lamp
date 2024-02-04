@@ -3,7 +3,7 @@ let dot = document.getElementById("dot");
 let container = document.querySelector(".container");
 let flag = false;
 
-const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
 
 function movingThread(event) {
   let x =
@@ -17,13 +17,19 @@ function movingThread(event) {
   dot.setAttribute("cy", y);
 }
 
-function animateThread(frame){
-    const amplitudeY = 20;
-    const amplitudeX = 20;
-    let deviationY = amplitudeY * (1 - frame) * Math.abs(Math.sin(frame * 3.14 * 3));
-    let deviationX = amplitudeX * (1 - frame) * Math.sin(frame * 3.14 * 3);
-    dot.setAttribute("cy", 185 - deviationY);
-    thread.setAttribute("d", `M50 140 q${deviationX} ${(45 - deviationY)/4}, 0 ${(45 - deviationY)/2} t0 ${(45 - deviationY)/2}`);
+function animateThread(frame) {
+  const amplitudeY = 20;
+  const amplitudeX = 20;
+  let deviationY =
+    amplitudeY * (1 - frame) * Math.abs(Math.sin(frame * 3.14 * 3));
+  let deviationX = amplitudeX * (1 - frame) * Math.sin(frame * 3.14 * 3);
+  dot.setAttribute("cy", 185 - deviationY);
+  thread.setAttribute(
+    "d",
+    `M50 140 q${deviationX} ${(45 - deviationY) / 4}, 0 ${
+      (45 - deviationY) / 2
+    } t0 ${(45 - deviationY) / 2}`
+  );
 }
 
 async function returnThread(transition = 130) {
@@ -32,18 +38,23 @@ async function returnThread(transition = 130) {
   let y = Number(thread.getAttribute("d").split(" ")[3]);
   while (Date.now() - startTime <= transition) {
     const difference = Date.now() - startTime;
-    thread.setAttribute("d", `M50 140 L${x + (50 - x)*difference/transition} ${y + (185 - y)*difference/transition}`);
-    dot.setAttribute("cx", x + (50 - x)*difference/transition);
-    dot.setAttribute("cy", y + (185 - y)*difference/transition);
+    thread.setAttribute(
+      "d",
+      `M50 140 L${x + ((50 - x) * difference) / transition} ${
+        y + ((185 - y) * difference) / transition
+      }`
+    );
+    dot.setAttribute("cx", x + ((50 - x) * difference) / transition);
+    dot.setAttribute("cy", y + ((185 - y) * difference) / transition);
     await sleep(15);
   }
   thread.setAttribute("d", `M50 140 L50 185`);
   dot.setAttribute("cx", 50);
   dot.setAttribute("cy", 185);
-  const animationTime = 800
-  while (Date.now() - startTime - transition < animationTime){
-    animateThread((Date.now() - startTime - transition)/animationTime);
-    await sleep(15)
+  const animationTime = 800;
+  while (Date.now() - startTime - transition < animationTime) {
+    animateThread((Date.now() - startTime - transition) / animationTime);
+    await sleep(15);
   }
   thread.setAttribute("d", `M50 140 L50 185`);
   dot.setAttribute("cx", 50);

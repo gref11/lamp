@@ -11,7 +11,7 @@
 
 <body>
     <div class="container off">
-        <svg width="100%" height="100%" viewBox="-100 -100 400 400" role="img">
+        <svg width="100%" height="100%" viewBox="-50 -100 400 400" role="img">
             <path class="base circuit" d="M70 100 v30 s-5 10 -20 10 s-20 -10 -20 -10 v -30 s5 -10, 20 -10 s20 10 20 10"
                 stroke="white" stroke-width="3" fill="rgba(175,175,190)" />
             <path d="M36 106 v30" stroke="white" stroke-width="6" />
@@ -20,14 +20,20 @@
             <path class="glass circuit"
                 d="M30 100 c0 -20, -20 -28, -20 -50 s18 -40, 40 -40 s40 18, 40 40 s-20 30, -20 50 l0 0 s-5 10 -20 10 s-20 -10 -20 -10"
                 stroke="white" stroke-width="3" fill="white" fill-opacity="0.13" />
-            <path d="M20 50 c0 -20, 20 -30, 30 -30 a3,3 0 0 1 0 0" stroke="white" fill="transparent" stroke-width="6"
+            <path d="M20 50 c0 -20, 20 -30, 30 -30 a3,3 0 0 1 0 0" stroke="white" stroke-opacity="0.7" fill="transparent" stroke-width="6"
                 stroke-linecap="round" />
             <path class="contact" d="M45 100 l-5 -25" stroke="rgb(150, 150, 150)" stroke-width="4"
                 stroke-linecap="round" />
             <path class="contact" d="M55 100 l5 -25" stroke="rgb(150, 150, 150)" stroke-width="4"
                 stroke-linecap="round" />
-            <path id="thread" class="circuit" d="M50 140 L50 185" stroke="white" stroke-width="3" fill="transparent"/>
+            <path id="thread" class="circuit" d="M50 140 L50 185" stroke="white" stroke-width="3" fill="transparent" />
             <circle id="dot" class="circuit" cx="50" cy="185" r="4" fill="white" />
+            <rect id="door" x="170" y="0" width="200" height="300" fill="Sienna" />
+            <rect class="door-element" x="200" y="40" width="55" height="130" fill="transparent" stroke-width="5" />
+            <rect class="door-element" x="285" y="40" width="55" height="130" fill="transparent" stroke-width="5" />
+            <rect class="door-element" x="200" y="250" width="55" height="130" fill="transparent" stroke-width="5" />
+            <rect class="door-element" x="285" y="250" width="55" height="130" fill="transparent" stroke-width="5" />
+            <rect id="door-knob" x="190" y="200" width="20" height="20" fill="darkorange" stroke-width="0" />
         </svg>
     </div>
 </body>
